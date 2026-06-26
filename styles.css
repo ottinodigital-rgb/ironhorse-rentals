@@ -963,6 +963,7 @@ section { padding: 84px 0; }
   .photo-grid .span2 { grid-column: span 1; }
   .steps { grid-template-columns: 1fr; }
   .nav-logo img { height: 48px; }
+  .hero-bg img { object-position: 65% center; }
 }
 
 /* ══════════════════════════════════════════════
