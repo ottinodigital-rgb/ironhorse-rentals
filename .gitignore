@@ -1,0 +1,8 @@
+node_modules/
+.claude/
+ironhorserentals-deploy.zip
+package.json
+package-lock.json
+server.ps1
+ih_*.png
+loader_*.js
