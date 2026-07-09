@@ -681,9 +681,12 @@ section { padding: 84px 0; }
 }
 .td-price small { font-family: var(--ff-body); font-size: .78rem; color: var(--text2); font-weight: 400; }
 .td-desc { font-family: var(--ff-body); font-size: .88rem; color: var(--text2); line-height: 1.78; margin-bottom: 22px; }
-.td-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; margin-bottom: 26px; }
+.td-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; margin-bottom: 20px; }
 .spec { display: flex; align-items: flex-start; gap: 8px; font-family: var(--ff-body); font-size: .81rem; color: var(--text2); }
 .spec::before { content: '✦'; color: var(--accent); font-size: .58rem; margin-top: 4px; flex-shrink: 0; }
+.td-gvwr { margin: 0 0 24px; padding: 14px 18px; background: var(--bg3); border-left: 2px solid var(--accent); }
+.td-gvwr-row { font-family: var(--ff-display); font-size: 1rem; font-weight: 700; color: var(--text-head); line-height: 1.7; }
+.td-gvwr-row span { font-family: var(--ff-body); font-size: .88rem; font-weight: 400; color: var(--text2); }
 
 /* ══════════════════════════════════════════════
    RESERVATION FORM
