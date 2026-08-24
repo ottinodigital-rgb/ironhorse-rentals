@@ -240,7 +240,7 @@ handleForm('contactForm', 'contactSuccess', 'Send Message');
 const sel = document.getElementById('trailerSelect');
 if (sel) {
   const h = location.hash.replace('#', '');
-  const map = { dump: 'dump', 'car-hauler': 'car-hauler', utility: 'utility' };
+  const map = { dump: 'dump', 'car-hauler': 'car-hauler', utility: 'utility', 'skid-steer': 'skid-steer' };
   if (map[h]) sel.value = map[h];
 }
 

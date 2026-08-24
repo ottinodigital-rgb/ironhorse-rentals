@@ -44,6 +44,7 @@
             <li><a href="#dump">83"&times;14' Dump Trailer</a></li>
             <li><a href="#car-hauler">22' Car Hauler</a></li>
             <li><a href="#utility">18' Utility Trailer</a></li>
+            <li><a href="#skid-steer">Mini Skid Steer</a></li>
           </ul>
         </li>
         <li><a href="rental-info.html">Rental Info</a></li>
@@ -101,7 +102,7 @@
             <div class="td-gvwr-row">GVWR: <span>— coming soon</span></div>
             <div class="td-gvwr-row">Carrying Capacity: <span>— coming soon</span></div>
           </div>
-          <a href="#reserve" class="btn btn-primary">Reserve This Trailer</a>
+          <a href="#reserve" class="btn btn-primary" onclick="document.getElementById('trailerSelect').value='dump'">Reserve This Trailer</a>
         </div>
       </div>
 
@@ -112,7 +113,7 @@
         <div class="td-body">
           <span class="td-tag">Lamar Car Hauler</span>
           <h2 class="td-name">22' Car Hauler</h2>
-          <div class="td-price">$90 <small>/ day</small></div>
+          <div class="td-price">$80 <small>/ day</small></div>
           <p class="td-desc">At 102" wide and 22 feet long, this Lamar car hauler is built to move vehicles, ATVs and other small equipment. Slide-in ramps make loading smooth and drive-over fenders give you full deck width.</p>
           <div class="td-specs">
             <div class="spec">22' long deck</div>
@@ -120,13 +121,14 @@
             <div class="spec">Slide-in ramps</div>
             <div class="spec">Drive-over fenders</div>
             <div class="spec">Tie-down rails</div>
+            <div class="spec">12,000 lb. winch</div>
             <div class="spec">Bumper pull</div>
           </div>
           <div class="td-gvwr">
             <div class="td-gvwr-row">GVWR: <span>— coming soon</span></div>
             <div class="td-gvwr-row">Carrying Capacity: <span>— coming soon</span></div>
           </div>
-          <a href="#reserve" class="btn btn-primary">Reserve This Trailer</a>
+          <a href="#reserve" class="btn btn-primary" onclick="document.getElementById('trailerSelect').value='car-hauler'">Reserve This Trailer</a>
         </div>
       </div>
 
@@ -142,7 +144,6 @@
           <div class="td-specs">
             <div class="spec">18' long deck</div>
             <div class="spec">4' rear gate</div>
-            <div class="spec">Mesh deck sides</div>
             <div class="spec">Multiple tie-down points</div>
             <div class="spec">LED lighting</div>
             <div class="spec">Bumper pull</div>
@@ -151,7 +152,32 @@
             <div class="td-gvwr-row">GVWR: <span>— coming soon</span></div>
             <div class="td-gvwr-row">Carrying Capacity: <span>— coming soon</span></div>
           </div>
-          <a href="#reserve" class="btn btn-primary">Reserve This Trailer</a>
+          <a href="#reserve" class="btn btn-primary" onclick="document.getElementById('trailerSelect').value='utility'">Reserve This Trailer</a>
+        </div>
+      </div>
+
+      <div class="td" id="skid-steer">
+        <div class="td-img">
+          <img src="IMG_5739.jpeg" alt="Runtong R740 Mini Skid Steer" loading="lazy">
+        </div>
+        <div class="td-body">
+          <span class="td-tag">Runtong R740</span>
+          <h2 class="td-name">Mini Skid Steer</h2>
+          <div class="td-price" style="font-size:1.5rem;">Call <small>for Pricing</small></div>
+          <p class="td-desc">Our Runtong R740 mini skid steer is compact, powerful, and built for jobs a full-size machine can't reach. With rubber tracks and a hydraulic front bucket, it handles digging, grading, and moving material on tight job sites, in yards, or anywhere you need a machine that fits through a gate.</p>
+          <div class="td-specs">
+            <div class="spec">24HP gasoline engine</div>
+            <div class="spec">Rubber track drive</div>
+            <div class="spec">Hydraulic front bucket</div>
+            <div class="spec">Compact &mdash; fits through gates</div>
+            <div class="spec">LED work lights</div>
+            <div class="spec">Transported on car hauler</div>
+          </div>
+          <div class="td-gvwr">
+            <div class="td-gvwr-row">Operating Weight: <span>1,960 lbs (890 kg)</span></div>
+            <div class="td-gvwr-row">Rated Load: <span>440 lbs (200 kg)</span></div>
+          </div>
+          <a href="#reserve" class="btn btn-primary" onclick="document.getElementById('trailerSelect').value='skid-steer'">Reserve This Equipment</a>
         </div>
       </div>
 
@@ -173,7 +199,10 @@
           <a href="mailto:ironhorserentals@gmail.com">ironhorserentals@gmail.com</a>
         </div>
         <p style="margin-top:20px;font-size:.8rem;color:var(--text2);">See <a href="rental-info.html">Rental Info</a> for requirements and what to bring.</p>
-        <p style="margin-top:12px;font-size:.85rem;color:var(--accent);font-weight:600;">&#10022; Multi-day rental discounts available &mdash; ask when you call.</p>
+        <div style="margin-top:20px;background:var(--bg3);border:2px solid var(--accent);padding:18px 22px;">
+          <p style="font-family:var(--ff-display);font-size:1.25rem;font-weight:700;color:var(--accent);margin:0 0 6px;letter-spacing:.03em;">&#10022; Multi-Day Discounts Available</p>
+          <p style="font-size:.88rem;color:var(--text2);margin:0;">Renting for 2 or more days? Ask us about reduced rates &mdash; call or text <a href="tel:9032439104" style="color:var(--accent);">903-243-9104</a>.</p>
+        </div>
       </div>
       <div>
         <form id="reservationForm">
@@ -193,10 +222,11 @@
             <div class="fg">
               <label for="trailerSelect">Trailer *</label>
               <select id="trailerSelect" name="trailer" required>
-                <option value="">-- Select a Trailer --</option>
+                <option value="">-- Select a Trailer or Equipment --</option>
                 <option value="dump">83"x14' Dump Trailer &mdash; $100/day</option>
-                <option value="car-hauler">22' Car Hauler &mdash; $90/day</option>
+                <option value="car-hauler">22' Car Hauler &mdash; $80/day</option>
                 <option value="utility">18' Utility Trailer &mdash; $60/day</option>
+                <option value="skid-steer">Mini Skid Steer &mdash; Call for Pricing</option>
               </select>
             </div>
             <div class="fg">
