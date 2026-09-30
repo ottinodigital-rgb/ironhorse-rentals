@@ -208,10 +208,12 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 });
 
 /* ── FORM HANDLER ── */
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mnpnlznn';
+
 function handleForm(formId, successId, btnLabel) {
   const form = document.getElementById(formId);
   if (!form) return;
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     let valid = true;
     form.querySelectorAll('[required]').forEach(f => {
@@ -221,8 +223,13 @@ function handleForm(formId, successId, btnLabel) {
     if (!valid) return;
     const btn = form.querySelector('[type=submit]');
     btn.disabled = true; btn.textContent = 'Sending…';
-    setTimeout(() => {
-      btn.disabled = false; btn.textContent = btnLabel;
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      if (!res.ok) throw new Error('Submission failed');
       form.reset();
       const s = document.getElementById(successId);
       if (s) {
@@ -230,7 +237,11 @@ function handleForm(formId, successId, btnLabel) {
         s.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         setTimeout(() => s.style.display = 'none', 7000);
       }
-    }, 1100);
+    } catch (err) {
+      alert("Sorry, something went wrong sending that. Please call or text us at 903-243-9104.");
+    } finally {
+      btn.disabled = false; btn.textContent = btnLabel;
+    }
   });
 }
 handleForm('reservationForm', 'resSuccess', 'Request Reservation');

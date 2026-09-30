@@ -99,8 +99,9 @@
             <div class="spec">Bumper pull</div>
           </div>
           <div class="td-gvwr">
-            <div class="td-gvwr-row">GVWR: <span>— coming soon</span></div>
-            <div class="td-gvwr-row">Carrying Capacity: <span>— coming soon</span></div>
+            <div class="td-gvwr-row">Empty Weight: <span>4,750 lbs</span></div>
+            <div class="td-gvwr-row">Carrying Capacity: <span>9,250 lbs</span></div>
+            <div class="td-gvwr-row">GVWR: <span>14,000 lbs</span></div>
           </div>
           <a href="#reserve" class="btn btn-primary" onclick="document.getElementById('trailerSelect').value='dump'">Reserve This Trailer</a>
         </div>
@@ -125,8 +126,9 @@
             <div class="spec">Bumper pull</div>
           </div>
           <div class="td-gvwr">
-            <div class="td-gvwr-row">GVWR: <span>— coming soon</span></div>
-            <div class="td-gvwr-row">Carrying Capacity: <span>— coming soon</span></div>
+            <div class="td-gvwr-row">Empty Weight: <span>3,000 lbs</span></div>
+            <div class="td-gvwr-row">Carrying Capacity: <span>6,990 lbs</span></div>
+            <div class="td-gvwr-row">GVWR: <span>9,990 lbs</span></div>
           </div>
           <a href="#reserve" class="btn btn-primary" onclick="document.getElementById('trailerSelect').value='car-hauler'">Reserve This Trailer</a>
         </div>
@@ -149,8 +151,9 @@
             <div class="spec">Bumper pull</div>
           </div>
           <div class="td-gvwr">
-            <div class="td-gvwr-row">GVWR: <span>— coming soon</span></div>
-            <div class="td-gvwr-row">Carrying Capacity: <span>— coming soon</span></div>
+            <div class="td-gvwr-row">Empty Weight: <span>1,910 lbs</span></div>
+            <div class="td-gvwr-row">Carrying Capacity: <span>5,090 lbs</span></div>
+            <div class="td-gvwr-row">GVWR: <span>7,000 lbs</span></div>
           </div>
           <a href="#reserve" class="btn btn-primary" onclick="document.getElementById('trailerSelect').value='utility'">Reserve This Trailer</a>
         </div>
@@ -163,7 +166,8 @@
         <div class="td-body">
           <span class="td-tag">Runtong R740</span>
           <h2 class="td-name">Mini Skid Steer</h2>
-          <div class="td-price" style="font-size:1.5rem;">Call <small>for Pricing</small></div>
+          <div class="td-price">$100 <small>/ day + trailer</small></div>
+          <p style="font-size:.85rem;color:var(--text2);margin:-6px 0 16px;">Paired with any trailer at 50% off that trailer's daily rate &mdash; e.g. Skid Steer + Utility Trailer = $130/day ($100 + half of $60). No multi-day discount applies to this combo.</p>
           <p class="td-desc">Our Runtong R740 mini skid steer is compact, powerful, and built for jobs a full-size machine can't reach. With rubber tracks and a hydraulic front bucket, it handles digging, grading, and moving material on tight job sites, in yards, or anywhere you need a machine that fits through a gate.</p>
           <div class="td-specs">
             <div class="spec">24HP gasoline engine</div>
@@ -175,7 +179,7 @@
           </div>
           <div class="td-gvwr">
             <div class="td-gvwr-row">Operating Weight: <span>1,960 lbs (890 kg)</span></div>
-            <div class="td-gvwr-row">Rated Load: <span>440 lbs (200 kg)</span></div>
+            <div class="td-gvwr-row">Rated Load: <span>830 lbs (376 kg)</span></div>
           </div>
           <a href="#reserve" class="btn btn-primary" onclick="document.getElementById('trailerSelect').value='skid-steer'">Reserve This Equipment</a>
         </div>
@@ -201,11 +205,13 @@
         <p style="margin-top:20px;font-size:.8rem;color:var(--text2);">See <a href="rental-info.html">Rental Info</a> for requirements and what to bring.</p>
         <div style="margin-top:20px;background:var(--bg3);border:2px solid var(--accent);padding:18px 22px;">
           <p style="font-family:var(--ff-display);font-size:1.25rem;font-weight:700;color:var(--accent);margin:0 0 6px;letter-spacing:.03em;">&#10022; Multi-Day Discounts Available</p>
-          <p style="font-size:.88rem;color:var(--text2);margin:0;">Renting for 2 or more days? Ask us about reduced rates &mdash; call or text <a href="tel:9032439104" style="color:var(--accent);">903-243-9104</a>.</p>
+          <p style="font-size:.88rem;color:var(--text2);margin:0;">25% off the daily rate after your first full day, on any trailer. Example: Dump Trailer is $100/day &mdash; $175 for 2 days, $250 for 3 days. (Discount doesn't apply to the Skid Steer combo rate.)</p>
         </div>
       </div>
       <div>
         <form id="reservationForm">
+          <input type="hidden" name="_subject" value="New reservation request — Ironhorse Rentals">
+          <input type="hidden" name="form_type" value="Reservation">
           <div class="form-grid">
             <div class="fg">
               <label for="r-name">Full Name *</label>
@@ -226,7 +232,7 @@
                 <option value="dump">83"x14' Dump Trailer &mdash; $100/day</option>
                 <option value="car-hauler">22' Car Hauler &mdash; $80/day</option>
                 <option value="utility">18' Utility Trailer &mdash; $60/day</option>
-                <option value="skid-steer">Mini Skid Steer &mdash; Call for Pricing</option>
+                <option value="skid-steer">Mini Skid Steer &mdash; $100/day + trailer</option>
               </select>
             </div>
             <div class="fg">
